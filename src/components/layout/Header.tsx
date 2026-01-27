@@ -31,13 +31,13 @@ const Header = () => {
       {/* Top Bar */}
       <div className="hidden md:block bg-gray-100 py-2">
         <div className="container-custom flex justify-end items-center space-x-6 text-sm text-muted-foreground">
-          <a href="tel:07731 1673836" className="flex items-center gap-2 hover:text-primary transition-colors">
+          <a href="tel:+912345678" className="flex items-center gap-2 hover:text-primary transition-colors">
             <Phone className="h-4 w-4" />
-            07731 1673836
+            +912345678
           </a>
-          <a href="mailto:info@bechler-servicesolutions.de" className="flex items-center gap-2 hover:text-primary transition-colors">
+          <a href="mailto:info@goldclean.de" className="flex items-center gap-2 hover:text-primary transition-colors">
             <Mail className="h-4 w-4" />
-            info@bechler-servicesolutions.de
+            info@goldclean.de
           </a>
         </div>
       </div>
@@ -49,8 +49,8 @@ const Header = () => {
           <Link to="/" className="flex-shrink-0">
             <img
               src="/images/logo.png"
-              alt="Bechler Service Solutions GmbH"
-              className="h-12 md:h-16 w-auto"
+              alt="GoldClean"
+              className="h-20 md:h-28 w-auto"
             />
           </Link>
 
@@ -61,11 +61,10 @@ const Header = () => {
                 {item.hasDropdown ? (
                   <div className="relative">
                     <button
-                      className={`flex items-center gap-1 font-medium transition-colors ${
-                        item.children?.some((c) => isActive(c.path))
+                      className={`flex items-center gap-1 font-medium transition-colors ${item.children?.some((c) => isActive(c.path))
                           ? "text-primary"
                           : "text-foreground hover:text-primary"
-                      }`}
+                        }`}
                     >
                       {item.label}
                       <ChevronDown className="h-4 w-4" />
@@ -76,9 +75,8 @@ const Header = () => {
                           <Link
                             key={child.path}
                             to={child.path}
-                            className={`block px-4 py-2 hover:bg-gray-50 transition-colors ${
-                              isActive(child.path) ? "text-primary" : "text-foreground"
-                            }`}
+                            className={`block px-4 py-2 hover:bg-gray-50 transition-colors ${isActive(child.path) ? "text-primary" : "text-foreground"
+                              }`}
                           >
                             {child.label}
                           </Link>
@@ -89,9 +87,8 @@ const Header = () => {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`font-medium transition-colors ${
-                      isActive(item.path) ? "text-primary" : "text-foreground hover:text-primary"
-                    }`}
+                    className={`font-medium transition-colors ${isActive(item.path) ? "text-primary" : "text-foreground hover:text-primary"
+                      }`}
                   >
                     {item.label}
                   </Link>
@@ -102,9 +99,9 @@ const Header = () => {
 
           {/* Contact Info Desktop */}
           <div className="hidden lg:flex items-center space-x-4 text-sm">
-            <a href="tel:07731 1673836" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+            <a href="tel:+912345678" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
               <Phone className="h-4 w-4" />
-              07731 1673836
+              +912345678
             </a>
           </div>
 
@@ -159,13 +156,13 @@ const Header = () => {
               </div>
             ))}
             <div className="mt-4 pt-4 border-t space-y-3">
-              <a href="tel:07731 1673836" className="flex items-center gap-2 text-primary">
+              <a href="tel:+912345678" className="flex items-center gap-2 text-primary">
                 <Phone className="h-4 w-4" />
-                07731 1673836
+                +912345678
               </a>
-              <a href="mailto:info@bechler-servicesolutions.de" className="flex items-center gap-2 text-primary">
+              <a href="mailto:info@goldclean.de" className="flex items-center gap-2 text-primary">
                 <Mail className="h-4 w-4" />
-                info@bechler-servicesolutions.de
+                info@goldclean.de
               </a>
             </div>
           </div>

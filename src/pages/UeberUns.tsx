@@ -29,24 +29,9 @@ const UeberUns = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <img
-                src="/images/michael-bechler.jpg"
-                alt="Michael Bechler"
-                className="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold">Michael Bechler</h3>
-              <p className="text-muted-foreground">Geschäftsführung</p>
-            </div>
-            
-            <div className="text-center">
-              <img
-                src="/images/fabian-bechler.jpg"
-                alt="Fabian Bechler"
-                className="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold">Fabian Bechler</h3>
-              <p className="text-muted-foreground">Prokurist und technischer Leiter</p>
+            <div className="text-center col-span-2">
+              <h3 className="text-xl font-semibold">Das GoldClean Team</h3>
+              <p className="text-muted-foreground">Ihr zuverlässiger Partner</p>
             </div>
           </div>
         </div>
@@ -56,7 +41,7 @@ const UeberUns = () => {
       <section className="section-padding bg-secondary/30">
         <div className="container-custom">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Was uns ausmacht</h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md">

@@ -63,7 +63,7 @@ const Unterhaltsreinigung = () => {
                 Verlassen Sie sich auf fachlich geschultes Personal, kontinuierliche Reinigungsqualität und ein rundum-sorglos Service.
               </p>
             </div>
-            
+
             <div className="bg-secondary/30 p-6 rounded-lg">
               <img
                 src="/images/ansprechpartner.png"
@@ -72,7 +72,7 @@ const Unterhaltsreinigung = () => {
               />
               <h4 className="font-semibold mb-2">Dürfen wir Ihnen weiterhelfen?</h4>
               <p className="text-sm text-muted-foreground mb-4">
-                Michael Bechler und Fabian Bechler (v. l.) freuen sich auf Ihre Anfrage.
+                Das GoldClean Team freut sich auf Ihre Anfrage.
               </p>
               <Link to="/kontakt" className="btn-primary w-full">
                 Kontakt aufnehmen
@@ -86,7 +86,7 @@ const Unterhaltsreinigung = () => {
       <section className="section-padding bg-secondary/30">
         <div className="container-custom">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Diese Arbeiten erledigen wir für Sie</h2>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {services.map((service, index) => (
               <div key={index} className="icon-box">

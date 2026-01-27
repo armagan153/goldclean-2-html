@@ -6,17 +6,17 @@ const Datenschutz = () => {
       <section className="section-padding">
         <div className="container-custom max-w-4xl">
           <h1 className="text-3xl md:text-4xl font-bold mb-8">Datenschutz</h1>
-          
+
           <div className="prose max-w-none text-muted-foreground">
             <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">1. Datenschutz auf einen Blick</h3>
-            
+
             <h4 className="text-lg font-semibold mt-6 mb-3 text-foreground">Allgemeine Hinweise</h4>
             <p className="mb-4">
               Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
             </p>
 
             <h4 className="text-lg font-semibold mt-6 mb-3 text-foreground">Datenerfassung auf dieser Website</h4>
-            
+
             <h5 className="font-semibold mt-4 mb-2 text-foreground">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h5>
             <p className="mb-4">
               Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
@@ -44,7 +44,7 @@ const Datenschutz = () => {
             </p>
 
             <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">2. Hosting</h3>
-            
+
             <h4 className="text-lg font-semibold mt-6 mb-3 text-foreground">IONOS</h4>
             <p className="mb-4">
               Wir hosten unsere Website bei IONOS SE. Anbieter ist die IONOS SE, Elgendorfer Str. 57, 56410 Montabaur (nachfolgend: IONOS). Wenn Sie unsere Website besuchen, erfasst IONOS verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von IONOS: <a href="https://www.ionos.de/terms-gtc/terms-privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.ionos.de/terms-gtc/terms-privacy</a>.
@@ -62,11 +62,9 @@ const Datenschutz = () => {
               Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
             </p>
             <p className="mb-4">
-              Bechler Service Solutions GmbH<br />
-              Fritz-Reichle-Ring 2,<br />
-              78315 Radolfzell<br /><br />
-              Telefon: 07732 9391677<br />
-              E-Mail: info@bechler-servicesolutions.de
+              GoldClean<br /><br />
+              Telefon: +912345678<br />
+              E-Mail: info@goldclean.de
             </p>
 
             <h4 className="text-lg font-semibold mt-6 mb-3 text-foreground">Speicherdauer</h4>

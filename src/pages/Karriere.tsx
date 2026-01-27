@@ -52,8 +52,8 @@ const Karriere = () => {
       {/* Why Apply Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Warum solltest Du dich bei Bechler bewerben?</h2>
-          
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Warum solltest Du dich bei GoldClean bewerben?</h2>
+
           <p className="text-muted-foreground mb-8 max-w-4xl">
             Zur Verstärkung unseres Teams suchen wir <strong>Fachkräfte</strong> zur Verstärkung <strong>im Bereich Reinigungsdienstleistung</strong> und <strong>Produktionsunterstützung (m/w/d)</strong>. Diese Stellen sind sowohl in Voll- / Teilzeit oder auf 520€ Basis verfügbar. Als Dienstleister für Reinigungsarbeiten und Produktionsunterstützung in Süddeutschland, erwartet Dich eine abwechslungsreiche Arbeit in spannenden Projekten. Bewirb Dich jetzt auf unsere Stellenangebote! Wir freuen uns Dich kennenzulernen.
           </p>
@@ -152,21 +152,21 @@ const Karriere = () => {
 
               <div>
                 <h3 className="text-xl font-bold mb-6">…oder direkt Kontakt aufnehmen</h3>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-semibold text-primary mb-2">Telefon</h4>
-                    <a href="tel:07731 1673836" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
+                    <a href="tel:+912345678" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
                       <Phone className="h-5 w-5 text-primary" />
-                      07731 1673836
+                      +912345678
                     </a>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-semibold text-primary mb-2">E-Mail</h4>
-                    <a href="mailto:info@bechler-servicesolutions.de" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
+                    <a href="mailto:info@goldclean.de" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
                       <Mail className="h-5 w-5 text-primary" />
-                      info@bechler-servicesolutions.de
+                      info@goldclean.de
                     </a>
                   </div>
                 </div>

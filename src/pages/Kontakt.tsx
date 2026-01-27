@@ -46,15 +46,7 @@ const Kontakt = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Details */}
             <div className="space-y-8">
-              <div>
-                <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-                  <MapPin className="h-5 w-5" />
-                  Adresse
-                </h4>
-                <p className="text-muted-foreground">
-                  Freibühlstraße 8,<br />
-                  78224 Singen
-                </p>
+              <div className="hidden">
               </div>
 
               <div>
@@ -62,8 +54,8 @@ const Kontakt = () => {
                   <Phone className="h-5 w-5" />
                   Telefon
                 </h4>
-                <a href="tel:07731 1673836" className="text-muted-foreground hover:text-primary transition-colors">
-                  07731 1673836
+                <a href="tel:+912345678" className="text-muted-foreground hover:text-primary transition-colors">
+                  +912345678
                 </a>
               </div>
 
@@ -72,8 +64,8 @@ const Kontakt = () => {
                   <Mail className="h-5 w-5" />
                   E-Mail
                 </h4>
-                <a href="mailto:info@bechler-servicesolutions.de" className="text-muted-foreground hover:text-primary transition-colors">
-                  info@bechler-servicesolutions.de
+                <a href="mailto:info@goldclean.de" className="text-muted-foreground hover:text-primary transition-colors">
+                  info@goldclean.de
                 </a>
               </div>
 
@@ -96,7 +88,7 @@ const Kontakt = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <h2 className="text-2xl md:text-3xl font-bold mb-6">Wir freuen uns auf Ihre Anfrage</h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -120,7 +112,7 @@ const Kontakt = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <input
@@ -144,7 +136,7 @@ const Kontakt = () => {
                     </select>
                   </div>
                 </div>
-                
+
                 <div>
                   <textarea
                     placeholder="Ihre Nachricht"
@@ -159,7 +151,7 @@ const Kontakt = () => {
                   * Pflichtfelder<br />
                   Sämtliche Daten werden gemäß Datenschutzerklärung nur streng zweckgebunden zur Bearbeitung und Beantwortung Ihrer Anfrage benutzt.
                 </p>
-                
+
                 <div className="flex items-start gap-3">
                   <input
                     type="checkbox"
@@ -173,7 +165,7 @@ const Kontakt = () => {
                     Ich habe die Datenschutzerklärung zur Kenntnis genommen und bin damit einverstanden, dass die von mir angegebenen Daten elektronisch erhoben und gespeichert werden. *
                   </label>
                 </div>
-                
+
                 <button type="submit" className="btn-primary">
                   Nachricht senden
                 </button>
@@ -187,7 +179,7 @@ const Kontakt = () => {
       <section className="h-96 bg-secondary/50 flex items-center justify-center">
         <div className="text-center">
           <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-          <p className="text-muted-foreground">Google Maps<br />Freibühlstraße 8, 78224 Singen</p>
+          <p className="text-muted-foreground">Google Maps Placeholder</p>
         </div>
       </section>
     </Layout>

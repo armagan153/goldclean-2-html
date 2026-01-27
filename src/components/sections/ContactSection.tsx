@@ -7,9 +7,9 @@ interface ContactSectionProps {
   subtitle?: string;
 }
 
-const ContactSection = ({ 
-  title = "Jetzt Angebot anfordern.", 
-  subtitle 
+const ContactSection = ({
+  title = "Jetzt Angebot anfordern.",
+  subtitle
 }: ContactSectionProps) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -37,7 +37,7 @@ const ContactSection = ({
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-8">{title}</h2>
             {subtitle && <p className="text-muted-foreground mb-6">{subtitle}</p>}
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <input
@@ -99,21 +99,21 @@ const ContactSection = ({
           {/* Contact Info */}
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-8">…oder direkt Kontakt aufnehmen</h3>
-            
+
             <div className="space-y-6">
               <div>
                 <h4 className="font-semibold text-primary mb-2">Telefon</h4>
-                <a href="tel:07731 1673836" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
+                <a href="tel:+912345678" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
                   <Phone className="h-5 w-5 text-primary" />
-                  07731 1673836
+                  +912345678
                 </a>
               </div>
-              
+
               <div>
                 <h4 className="font-semibold text-primary mb-2">E-Mail</h4>
-                <a href="mailto:info@bechler-servicesolutions.de" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
+                <a href="mailto:info@goldclean.de" className="text-lg hover:text-primary transition-colors flex items-center gap-2">
                   <Mail className="h-5 w-5 text-primary" />
-                  info@bechler-servicesolutions.de
+                  info@goldclean.de
                 </a>
               </div>
             </div>

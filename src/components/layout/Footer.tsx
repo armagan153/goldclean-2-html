@@ -28,7 +28,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Bechler Service Solutions GmbH
+            © {new Date().getFullYear()} GoldClean
           </div>
         </div>
       </div>

@@ -7,13 +7,11 @@ const Impressum = () => {
       <section className="section-padding">
         <div className="container-custom max-w-4xl">
           <h1 className="text-3xl md:text-4xl font-bold mb-8">Impressum</h1>
-          
+
           <div className="prose max-w-none">
             <h3 className="text-xl font-semibold mt-8 mb-4">Angaben gemäß § 5 TMG</h3>
             <p className="mb-4">
-              Bechler Service Solutions GmbH<br />
-              Freibühlstraße 8,<br />
-              78224 Singen
+              GoldClean<br />
             </p>
             <p className="mb-4">
               Handelsregister: HRB 726019<br />
@@ -21,13 +19,13 @@ const Impressum = () => {
             </p>
             <p className="mb-4">
               <strong>Vertreten durch:</strong><br />
-              Michael Bechler
+              Geschäftsführung
             </p>
 
             <h3 className="text-xl font-semibold mt-8 mb-4">Kontakt</h3>
             <p className="mb-4">
-              Telefon: 07731 1673836<br />
-              E-Mail: info@bechler-servicesolutions.de
+              Telefon: +912345678<br />
+              E-Mail: info@goldclean.de
             </p>
 
             <h3 className="text-xl font-semibold mt-8 mb-4">Umsatzsteuer-ID</h3>
@@ -37,7 +35,7 @@ const Impressum = () => {
             </p>
 
             <h3 className="text-xl font-semibold mt-8 mb-4">Redaktionell verantwortlich</h3>
-            <p className="mb-4">Michael Bechler</p>
+            <p className="mb-4">GoldClean Redaktion</p>
 
             <h3 className="text-xl font-semibold mt-8 mb-4">Konzeption, Design & Entwicklung</h3>
             <p className="mb-4">

@@ -58,7 +58,7 @@ const TechnischeReinigung = () => {
                 Mit der technischen Reinigung sorgen unsere Spezialisten dafür, dass Ihre Maschinen und Anlagen in einem gepflegten Zustand bleiben und eine effiziente Produktion gewährleisten. Mithilfe modernster Reinigungsverfahren und Reinigungsmaschinen bieten wir Ihnen passgenaue Reinigungskonzepte für Ihre Anlagen und Werke. Sie können sich voll und ganz auf Ihr Kerngeschäft konzentrieren, während wir die professionelle Entfernung von Verschmutzungen und Verschleiß vornehmen. So werden Ausfallzeiten der Maschinen reduziert und die Sicherheit am Arbeitsplatz erhöht. Unsere ausgebildeten Fachkräfte achten neben der Qualität der technischen Reinigung auch auf materialschonende und umweltfreundliche Verfahren.
               </p>
             </div>
-            
+
             <div className="bg-secondary/30 p-6 rounded-lg">
               <img
                 src="/images/ansprechpartner.png"
@@ -67,7 +67,7 @@ const TechnischeReinigung = () => {
               />
               <h4 className="font-semibold mb-2">Dürfen wir Ihnen weiterhelfen?</h4>
               <p className="text-sm text-muted-foreground mb-4">
-                Michael Bechler und Fabian Bechler (v. l.) freuen sich auf Ihre Anfrage.
+                Das GoldClean Team freut sich auf Ihre Anfrage.
               </p>
               <Link to="/kontakt" className="btn-primary w-full">
                 Kontakt aufnehmen
@@ -81,7 +81,7 @@ const TechnischeReinigung = () => {
       <section className="section-padding bg-secondary/30">
         <div className="container-custom">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Diese Arbeiten erledigen wir für Sie</h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="icon-box">
