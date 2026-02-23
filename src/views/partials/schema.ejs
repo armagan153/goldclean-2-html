@@ -1,0 +1,58 @@
+<!-- Base JSON-LD Schema for GoldClean Service Solutions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://goldclean.de/#organization",
+      "name": "GoldClean Service Solutions",
+      "url": "https://goldclean.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://goldclean.de/images/logo.webp",
+        "width": "600",
+        "height": "150"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+912345678",
+        "contactType": "customer service",
+        "email": "info@goldclean.de",
+        "areaServed": "DE",
+        "availableLanguage": "German"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://goldclean.de/#localbusiness",
+      "name": "GoldClean Service Solutions",
+      "image": "https://goldclean.de/images/team.webp",
+      "telephone": "+912345678",
+      "email": "info@goldclean.de",
+      "url": "https://goldclean.de",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DE",
+        "addressRegion": "Süddeutschland"
+      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Baden-Württemberg"
+        },
+        {
+          "@type": "State",
+          "name": "Bayern"
+        }
+      ],
+      "priceRange": "$$",
+      "description": "Professionelle Reinigungsfirma in Süddeutschland. Wir bieten Technische Reinigung, Unterhaltsreinigung und Produktionsunterstützung für Industrie und Gewerbe."
+    }
+    <% if (typeof schema !== 'undefined' && schema) { %>
+    ,<%- JSON.stringify(schema, null, 2) %>
+    <% } %>
+  ]
+}
+</script>
