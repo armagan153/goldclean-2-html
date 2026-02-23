@@ -21,6 +21,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if (close) close.addEventListener('click', toggleMenu);
     if (overlay) overlay.addEventListener('click', toggleMenu);
 
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Optional: Hide/Show button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.pointerEvents = 'none';
+            }
+        });
+
+        // Initial state
+        scrollToTopBtn.style.transition = 'opacity 0.3s ease';
+        if (window.scrollY <= 300) {
+            scrollToTopBtn.style.opacity = '0';
+            scrollToTopBtn.style.pointerEvents = 'none';
+        }
+    }
+
+
     // Scroll Animation Observer
     const observerOptions = {
         root: null,
@@ -37,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.fade-in-section').forEach(section => {
+    document.querySelectorAll('.reveal-fade-up, .reveal-scale, .fade-in-section').forEach(section => {
         observer.observe(section);
     });
 });
