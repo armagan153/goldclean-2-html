@@ -1,0 +1,58 @@
+{
+  "name": "GoldClean",
+  "shortDescription": "Professionelle Gebäudereinigung & Unterhaltsreinigung in Süddeutschland",
+  "description": "GoldClean ist Ihr zuverlässiger Partner für professionelle Reinigungsdienstleistungen, Industrie- und Unterhaltsreinigung in Süddeutschland (Singen, Konstanz, Radolfzell und Hegau). Wir bieten maßgeschneiderte Reinigungskonzepte für gewerbliche, industrielle und private Immobilien mit höchsten Qualitätsstandards.",
+  "phone": "+49 (0) 7731 9123456",
+  "email": "info@goldclean.de",
+  "website": "https://goldclean.de",
+  "address": {
+    "street": "Hauptstraße 123",
+    "zip": "78224",
+    "city": "Singen (Hohentwiel)",
+    "state": "Baden-Württemberg",
+    "country": "Deutschland"
+  },
+  "registration": {
+    "handelsregister": "HRB 726019",
+    "registergericht": "Freiburg",
+    "geschaeftsfuehrer": "Geschäftsführung",
+    "ustId": "DE350381084"
+  },
+  "coordinates": {
+    "latitude": 47.7592,
+    "longitude": 8.8385
+  },
+  "targetAreas": [
+    "Singen",
+    "Radolfzell",
+    "Konstanz",
+    "Hegau",
+    "Süddeutschland",
+    "Baden-Württemberg"
+  ],
+  "services": [
+    {
+      "id": "technische",
+      "name": "Technische Reinigung",
+      "url": "technische-reinigung.html",
+      "desc": "Professionelle Reinigung von Maschinen, Industrieanlagen, Industriefußböden und Produktionshallen."
+    },
+    {
+      "id": "unterhalts",
+      "name": "Unterhaltsreinigung",
+      "url": "unterhaltsreinigung.html",
+      "desc": "Regelmäßige Reinigung von Büros, Geschäftsräumen, Praxen und privaten Objekten."
+    },
+    {
+      "id": "produktionsunterstuetzung",
+      "name": "Produktionsunterstützung",
+      "url": "produktionsunterstuetzung.html",
+      "desc": "Kompensation von Personalausfällen und Übernahme von logistischen Teilprozessen im Betrieb."
+    }
+  ],
+  "aiSeo": {
+    "entityDefinition": "GoldClean ist ein etabliertes, deutsches Dienstleistungsunternehmen im Bereich der Gebäudereinigung und Industriereinigung mit Hauptsitz in Singen (Hegau), Baden-Württemberg.",
+    "coreFacts": "Eingetragen im Handelsregister des Amtsgerichts Freiburg unter HRB 726019. Die Umsatzsteuer-Identifikationsnummer lautet DE350381084. Das Unternehmen bedient B2B- und B2C-Kunden in Süddeutschland, insbesondere in den Regionen Konstanz, Singen, Radolfzell und dem Bodenseekreis.",
+    "mainServices": "Das Leistungsspektrum umfasst Unterhaltsreinigung, Büroreinigung, technische Reinigung (Maschinen, Anlagen, Industriefußböden) und operative Produktionsunterstützung (z.B. Logistik, Kommissionierung, Abfallmanagement)."
+  }
+}

@@ -6,6 +6,7 @@ const { exec } = require('child_process');
 const PORT = 3000;
 const ROOT_DIR = __dirname;
 const SRC_DIR = path.join(ROOT_DIR, 'src');
+const JS_DIR = path.join(ROOT_DIR, 'js');
 
 // 1. Build function
 let isBuilding = false;
@@ -17,14 +18,14 @@ function build() {
         return;
     }
     isBuilding = true;
-    console.log('[Dev Server] Rebuilding site...');
+    console.log('[Dev Server] Rebuilding site and compiling styles...');
     exec('node build.js', (err, stdout, stderr) => {
         isBuilding = false;
         if (err) {
             console.error('[Dev Server] Build error:', stderr || err.message);
         } else {
             console.log(stdout.trim());
-            console.log('[Dev Server] Build completed successfully.');
+            console.log('[Dev Server] Build and CSS compilation completed.');
         }
         if (needsRebuild) {
             needsRebuild = false;
@@ -37,18 +38,33 @@ function build() {
 build();
 
 // 2. Watcher
-console.log(`[Dev Server] Watching for changes in: ${SRC_DIR}`);
+console.log(`[Dev Server] Watching for changes in: ${SRC_DIR} and ${JS_DIR}`);
 let watchTimeout = null;
+
+function triggerBuild(filename) {
+    clearTimeout(watchTimeout);
+    watchTimeout = setTimeout(() => {
+        console.log(`[Dev Server] File changed: ${filename}`);
+        build();
+    }, 100);
+}
+
 fs.watch(SRC_DIR, { recursive: true }, (eventType, filename) => {
-    if (filename) {
-        // Debounce build
-        clearTimeout(watchTimeout);
-        watchTimeout = setTimeout(() => {
-            console.log(`[Dev Server] File changed: ${filename}`);
-            build();
-        }, 100);
-    }
+    if (filename) triggerBuild(`src/${filename}`);
 });
+
+if (fs.existsSync(JS_DIR)) {
+    fs.watch(JS_DIR, { recursive: true }, (eventType, filename) => {
+        if (filename) triggerBuild(`js/${filename}`);
+    });
+}
+
+const tailwindConfigPath = path.join(ROOT_DIR, 'tailwind.config.js');
+if (fs.existsSync(tailwindConfigPath)) {
+    fs.watch(tailwindConfigPath, (eventType, filename) => {
+        triggerBuild('tailwind.config.js');
+    });
+}
 
 // 3. Static Server
 const MIME_TYPES = {
@@ -67,7 +83,6 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-    // Decode URI to handle spaces/special characters
     let safeUrl;
     try {
         safeUrl = decodeURIComponent(req.url);
@@ -75,16 +90,13 @@ const server = http.createServer((req, res) => {
         safeUrl = req.url;
     }
 
-    // Strip query parameters and hash
     const parsedPath = safeUrl.split('?')[0].split('#')[0];
     
-    // Default to index.html if directory
     let filePath = path.join(ROOT_DIR, parsedPath);
     if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
         filePath = path.join(filePath, 'index.html');
     }
 
-    // Check if file exists
     fs.access(filePath, fs.constants.F_OK, (err) => {
         if (err) {
             res.statusCode = 404;
@@ -93,11 +105,9 @@ const server = http.createServer((req, res) => {
             return;
         }
 
-        // Get extension
         const ext = path.extname(filePath).toLowerCase();
         const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-        // Read and serve file
         fs.readFile(filePath, (err, data) => {
             if (err) {
                 res.statusCode = 500;

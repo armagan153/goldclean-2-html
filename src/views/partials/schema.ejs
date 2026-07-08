@@ -5,50 +5,48 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://goldclean.de/#organization",
-      "name": "GoldClean Service Solutions",
-      "url": "https://goldclean.de",
+      "@id": "<%= company.website %>/#organization",
+      "name": "<%= company.name %>",
+      "url": "<%= company.website %>",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://goldclean.de/images/logo.webp",
+        "url": "<%= company.website %>/images/logo.webp",
         "width": "600",
         "height": "150"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+912345678",
+        "telephone": "<%= company.phone %>",
         "contactType": "customer service",
-        "email": "info@goldclean.de",
+        "email": "<%= company.email %>",
         "areaServed": "DE",
         "availableLanguage": "German"
-      },
-      "sameAs": []
+      }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://goldclean.de/#localbusiness",
-      "name": "GoldClean Service Solutions",
-      "image": "https://goldclean.de/images/team.webp",
-      "telephone": "+912345678",
-      "email": "info@goldclean.de",
-      "url": "https://goldclean.de",
+      "@id": "<%= company.website %>/#localbusiness",
+      "name": "<%= company.name %>",
+      "image": "<%= company.website %>/images/logo.webp",
+      "telephone": "<%= company.phone %>",
+      "email": "<%= company.email %>",
+      "url": "<%= company.website %>",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "DE",
-        "addressRegion": "Süddeutschland"
+        "streetAddress": "<%= company.address.street %>",
+        "addressLocality": "<%= company.address.city %>",
+        "postalCode": "<%= company.address.zip %>",
+        "addressRegion": "<%= company.address.state %>",
+        "addressCountry": "DE"
       },
-      "areaServed": [
-        {
-          "@type": "State",
-          "name": "Baden-Württemberg"
-        },
-        {
-          "@type": "State",
-          "name": "Bayern"
-        }
-      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": <%= company.coordinates.latitude %>,
+        "longitude": <%= company.coordinates.longitude %>
+      },
+      "areaServed": <%- JSON.stringify(company.targetAreas) %>,
       "priceRange": "$$",
-      "description": "Professionelle Reinigungsfirma in Süddeutschland. Wir bieten Technische Reinigung, Unterhaltsreinigung und Produktionsunterstützung für Industrie und Gewerbe."
+      "description": "<%= company.description %>"
     }
     <% if (typeof schema !== 'undefined' && schema) { %>
     ,<%- JSON.stringify(schema, null, 2) %>
